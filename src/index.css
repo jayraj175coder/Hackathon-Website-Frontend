@@ -1,13 +1,178 @@
-body {
+/* Basic Reset and Font Styling */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #f3f4f6;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+/* Main Content Styling */
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+/* Hackathon Card Styling */
+.hackathon-card {
+  width: 320px;
+  margin: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.hackathon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hackathon-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #667eea; /* Adds a border below the image */
+}
+
+.hackathon-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.hackathon-card h2 {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hackathon-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.hackathon-card .view-details {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #667eea;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.hackathon-card a{
+text-decoration: none;
+text-align: center;
+margin-left: 30%;
+}
+.hackathon-card .view-details:hover {
+  background-color: #556cd6;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hackathon-card .view-details:active {
+  transform: translateY(-1px);
+}
+
+.hackathon-card .view-details:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.5);
+}
+
+/* Footer Styling */
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  .hackathon-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .hackathon-card img {
+    height: 150px;
+  }
+
+  .hackathon-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .hackathon-card .view-details {
+    padding: 10px 20px;
+  }
+}
+
+/* Keyframes for FadeIn Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

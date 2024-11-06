@@ -1,0 +1,139 @@
+/* src/components/HackathonDetails.css */
+
+.hackathon-details {
+    font-family: 'Roboto', sans-serif;
+    padding: 40px;
+    background-color: #f7f8fc;
+  }
+  
+  .hackathon-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .hackathon-header h1 {
+    font-size: 3rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .event-dates {
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  .hackathon-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .sidebar {
+    flex: 1 1 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h3 {
+    font-size: 1.4rem;
+    color: #667eea;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .details-main {
+    flex: 2 1 600px;
+  }
+  
+  .hackathon-description, .additional-info {
+    margin-bottom: 30px;
+  }
+  
+  .hackathon-description h3, .additional-info h3 {
+    font-size: 1.8rem;
+    color: #667eea;
+    margin-bottom: 15px;
+  }
+  
+  .hackathon-description p, .additional-info p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  .register-btn {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .login-register {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #667eea;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .login-register:hover {
+    background-color: #5561c6;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hackathon-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .sidebar, .details-main {
+      flex: 1 1 100%;
+    }
+  
+    .hackathon-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hackathon-description h3, .additional-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    .hackathon-description p, .additional-info p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hackathon-header h1 {
+      font-size: 2rem;
+    }
+  
+    .event-dates {
+      font-size: 1rem;
+    }
+  
+    .sidebar h3, .details-main h3 {
+      font-size: 1.3rem;
+    }
+  
+    .sidebar p, .details-main p {
+      font-size: 0.9rem;
+    }
+  
+    .login-register {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+  
